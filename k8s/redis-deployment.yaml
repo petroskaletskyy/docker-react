@@ -8,8 +8,16 @@ spec:
     matchLabels:
       component: redis
   template:
-    containers:
-      - name: redis
-        image: redis 
-        ports:
-          - containerPort: 6379 
+    metadata:
+      labels:
+        component: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis 
+          ports:
+            - containerPort: 6379 
+          resources:
+            limits:
+              cpu: "250m"
+              memory: "128Mi"  
