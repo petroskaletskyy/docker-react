@@ -22,5 +22,5 @@ spec:
               value: '6379' 
           resources:
             limits:
-              cpu: "250m"
-              memory: "128Mi"
+              cpu: "50m"
+              memory: "64Mi"
